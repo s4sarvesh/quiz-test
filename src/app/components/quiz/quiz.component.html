@@ -1,7 +1,8 @@
 <app-nav></app-nav>
 <div class="container">
-    <span class="badgeColor badge"
-        [ngClass]="{'bg-danger':(timeleft < 6), 'bg-success':(timeleft > 5)}">{{utilService.parseTime(timeleft)}}</span>
+    <div class="div-align"><span class="badgeColor badge"
+            [ngClass]="{'bg-danger':(timeleft < 6), 'bg-success':(timeleft > 5)}">{{utilService.parseTime(timeleft)}}</span>
+    </div>
     <div class="div-margin card">
         <div class="card-body"
             *ngFor="let question of quizService.questions | async | slice:(pageCounter-1):(pageCounter);let i=index">
