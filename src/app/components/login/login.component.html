@@ -1,7 +1,7 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="container">
-
         <h4>Login here</h4>
+        <div *ngIf="error" class="login-message text-center">{{error}}</div>
         <label for="username">Username</label>
         <input type="text" formControlName="username" class="form-control"
             [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />

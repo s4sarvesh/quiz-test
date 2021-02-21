@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   loading = false;
   submitted = false;
   returnUrl: string;
-
+  error: string;
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate([this.returnUrl]);
         },
         error => {
-
+          this.error = "Invalid credentials";
         });
   }
 }
