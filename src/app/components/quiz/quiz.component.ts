@@ -42,7 +42,7 @@ export class QuizComponent implements OnInit, AfterViewInit {
         const time = val;
         if (time == ((definedTImer * 60) - 1)) {
           this.stopTimer();
-          //this.router.navigate(['/result']);
+          this.router.navigate(['/result']);
         }
         this.timeleft = this.timeleft - 1;
       }
