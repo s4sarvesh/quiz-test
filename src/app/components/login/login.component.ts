@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   loading = false;
   submitted = false;
   returnUrl: string;
+  errorShow = false;
   error: string;
   constructor(
     private formBuilder: FormBuilder,
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-
+    this.errorShow = false;
     // stop here if form is invalid
     if (this.loginForm.invalid) {
       return;
@@ -52,7 +53,17 @@ export class LoginComponent implements OnInit {
           this.router.navigate([this.returnUrl]);
         },
         error => {
+          this.errorShow = true;
           this.error = "Invalid credentials";
         });
+  }
+
+  resetForm() {
+
+    this.loginForm.reset();
+    this.errorShow = false;
+    Object.keys(this.loginForm.controls).forEach(key => {
+      this.loginForm.get(key).setErrors(null);
+    });
   }
 }

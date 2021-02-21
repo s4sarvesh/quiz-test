@@ -1,7 +1,7 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="container">
         <h4>Login here</h4>
-        <div *ngIf="error" class="login-message text-center">{{error}}</div>
+        <div *ngIf="errorShow" class="login-message text-center">{{error}}</div>
         <label for="username">Username</label>
         <input type="text" formControlName="username" class="form-control"
             [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
@@ -20,7 +20,7 @@
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="button" class="cancelbtn" (click)="resetForm()">Cancel</button>
         <span class="psw"><a href="/register">Not Registered</a></span>
     </div>
 </form>

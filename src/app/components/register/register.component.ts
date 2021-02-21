@@ -53,4 +53,12 @@ export class RegisterComponent implements OnInit {
 
         });
   }
+
+  resetForm() {
+
+    this.registerForm.reset();
+    Object.keys(this.registerForm.controls).forEach(key => {
+      this.registerForm.get(key).setErrors(null);
+    });
+  }
 }
