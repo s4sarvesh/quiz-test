@@ -1,0 +1,148 @@
+{
+    "id": 1,
+    "name": "Quiz",
+    "description": "JavaScript Quiz (Basic Multiple Choice Questions for JavaScript Developers)",
+    "allotedTime": 0.5,
+    "questions": [
+        {
+            "id": 1,
+            "name": "Which HTML tag do we use to put the JavaScript?",
+            "options": [
+                {
+                    "id": 1,
+                    "name": "<javascript>"
+                },
+                {
+                    "id": 2,
+                    "name": "<script>"
+                },
+                {
+                    "id": 3,
+                    "name": "<js>"
+                },
+                {
+                    "id": 4,
+                    "name": "None of the above"
+                }
+            ],
+            "selectedAnswers": [],
+            "answers": [
+                1,
+                2
+            ],
+            "questionType": "mcq"
+        },
+        {
+            "id": 2,
+            "name": "Which built-in method calls a function for each element in the array?",
+            "options": [
+                {
+                    "id": 5,
+                    "name": "while()"
+                },
+                {
+                    "id": 6,
+                    "name": "loop"
+                },
+                {
+                    "id": 7,
+                    "name": "forEach"
+                },
+                {
+                    "id": 8,
+                    "name": "takeUntil"
+                }
+            ],
+            "selectedAnswers": [],
+            "answers": [
+                5,
+                8
+            ],
+            "questionType": "mcq"
+        },
+        {
+            "id": 3,
+            "name": "What is the difference between let and var?",
+            "options": [
+                {
+                    "id": 9,
+                    "name": "let has local scope"
+                },
+                {
+                    "id": 10,
+                    "name": "Both are same"
+                },
+                {
+                    "id": 11,
+                    "name": "var is new data type"
+                },
+                {
+                    "id": 12,
+                    "name": "let consumes more cpu and ram"
+                }
+            ],
+            "selectedAnswers": [],
+            "answers": [
+                11,
+                12
+            ],
+            "questionType": "mcq"
+        },
+        {
+            "id": 4,
+            "name": "What is TypeScript?",
+            "options": [
+                {
+                    "id": 13,
+                    "name": "A Language based on Javascript"
+                },
+                {
+                    "id": 14,
+                    "name": "script that runs on browser"
+                },
+                {
+                    "id": 15,
+                    "name": "A DataType Collection of Javascript"
+                },
+                {
+                    "id": 16,
+                    "name": "None of the above"
+                }
+            ],
+            "selectedAnswers": [],
+            "answers": [
+                14,
+                15
+            ],
+            "questionType": "mcq"
+        },
+        {
+            "id": 5,
+            "name": "Which of the following is right syntex for arrow function?",
+            "options": [
+                {
+                    "id": 17,
+                    "name": "a -> { return b; }"
+                },
+                {
+                    "id": 18,
+                    "name": "x <= x + y;"
+                },
+                {
+                    "id": 19,
+                    "name": "x <- x + 5;"
+                },
+                {
+                    "id": 20,
+                    "name": "x => x + 5;"
+                }
+            ],
+            "selectedAnswers": [],
+            "answers": [
+                17,
+                20
+            ],
+            "questionType": "mcq"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+<app-nav></app-nav>
+<div class="container">
+    <h3>
+        Final result
+    </h3> (Right question: <b>{{finalResultObject.right}}</b>,
+    Wrong question: <b>{{finalResultObject.wrong}}</b>,
+    Not attemted question: <b>{{finalResultObject.unattempted}}</b>)
+    <ul class="list-group div-margin">
+        <li class="list-group-item" *ngFor="let question of quizService.questions | async;let i=index">
+            <span><b>Qu. {{i+1}}: </b></span>
+            <span class="" [innerHTML]="question.name"></span>
+            <div class="div-margin"></div>
+            <span><b>Answer: </b></span>
+            <span class="badgeColor badge rounded-pill"
+                [ngClass]="{'bg-warning':( question.result == 'Unattempted'), 'bg-success':( question.result == 'Right'), 'bg-danger':( question.result == 'Wrong')}">{{question.result}}</span>
+        </li>
+    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button (click)="goToHome();" class="btn btn-primary">Want to reattempt?</button>
+            </div>
+        </div>
+    </div>
+</div>
